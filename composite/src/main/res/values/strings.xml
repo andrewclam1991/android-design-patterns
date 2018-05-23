@@ -1,3 +1,4 @@
 <resources>
-    <string name="app_name">Composite</string>
+    <string name="app_name">Composite Pattern</string>
+    <string name="title_activity_main">Composite Menu Activity</string>
 </resources>

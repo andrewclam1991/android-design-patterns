@@ -12,7 +12,7 @@ public abstract class MenuComponent {
 
   /**
    * Composite method
-   * Adds a component Leaf to a Node
+   * Adds a component Leaf to a composite Node
    * @param component Leaf to be added
    */
   public void add (MenuComponent component){
@@ -21,7 +21,7 @@ public abstract class MenuComponent {
 
   /**
    * Composite method
-   * Remove an existing component Leaf from a Node
+   * Remove an existing component Leaf from a composite Node
    * @param component Leaf to be plucked
    */
   public void remove (MenuComponent component){
@@ -30,7 +30,7 @@ public abstract class MenuComponent {
 
   /**
    * Composite method
-   * Find an existing component Leaf within a Node by index
+   * Find an existing component Leaf within a composite Node by index
    * @param index the index of the Leaf within a Node collection
    * @return the particular Leaf client is looking for by index
    */
@@ -69,7 +69,7 @@ public abstract class MenuComponent {
   /**
    * @return prints leaf/node's description
    */
-  String print(){
+  public String print(){
     throw new UnsupportedOperationException();
   }
 }
