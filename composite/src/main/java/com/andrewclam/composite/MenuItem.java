@@ -1,5 +1,7 @@
 package com.andrewclam.composite;
 
+import java.util.Iterator;
+
 /**
  * Implementation of a {@link MenuComponent} that
  * represents each item within a menu (composite)
@@ -73,5 +75,13 @@ public class MenuItem extends MenuComponent {
     sb.append(String.format(",%s", getPrice()));
     sb.append(String.format("  -- %s", getDescription()));
     return sb.toString();
+  }
+
+  @Override
+  Iterator<MenuComponent> createIterator() {
+    // Since a menu item is not responsible for hosting a collection
+    // of other menu component, here we use NullIterator to exclude
+    // this menu item from participating in iteration.
+    return new NullIterator();
   }
 }

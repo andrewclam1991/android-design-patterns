@@ -17,7 +17,7 @@ import com.andrewclam.composite.R;
  * Example client of that demonstrates the use of
  * {@link MenuComponent} Composite Pattern
  */
-public class MenuActivity extends AppCompatActivity {
+public class CompositeActivity extends AppCompatActivity {
 
   @Override
   protected void onCreate(Bundle savedInstanceState) {

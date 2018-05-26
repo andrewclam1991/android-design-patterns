@@ -1,5 +1,7 @@
 package com.andrewclam.composite;
 
+import java.util.Iterator;
+
 /**
  * Abstract API for composite member Node and Leaf, in this case the Leaf will be
  * the each menu item, and the Node will be the menu.
@@ -41,9 +43,7 @@ public abstract class MenuComponent {
   /**
    * @return the name of the leaf/node
    */
-  String getName(){
-    throw new UnsupportedOperationException();
-  }
+  String getName(){ throw new UnsupportedOperationException(); }
 
   /**
    * @return the description of the leaf/node
@@ -72,4 +72,11 @@ public abstract class MenuComponent {
   public String print(){
     throw new UnsupportedOperationException();
   }
+
+  /**
+   * each leaf or node would require to implement this method
+   * that means calling this method on a composite would apply to all children
+   * of the composite.
+   */
+  abstract Iterator<MenuComponent> createIterator();
 }

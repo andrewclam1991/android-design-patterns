@@ -1,6 +1,7 @@
 package com.andrewclam.composite;
 
 import android.support.annotation.NonNull;
+import android.support.annotation.Nullable;
 
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -11,6 +12,9 @@ import java.util.List;
  * collection of {@link MenuItem}s (Leaves) or other {@link Menu}s (Nodes)
  */
 public class Menu extends MenuComponent {
+  @Nullable
+  private Iterator<MenuComponent> iterator = null;
+
   @NonNull
   private final List<MenuComponent> menuComponents;
 
@@ -33,14 +37,10 @@ public class Menu extends MenuComponent {
   }
 
   @Override
-  public void remove(MenuComponent component) {
-    menuComponents.remove(component);
-  }
+  public void remove(MenuComponent component) { menuComponents.remove(component); }
 
   @Override
-  public MenuComponent getChild(int index) {
-    return menuComponents.get(index);
-  }
+  public MenuComponent getChild(int index) { return menuComponents.get(index); }
 
   @NonNull
   @Override
@@ -82,5 +82,11 @@ public class Menu extends MenuComponent {
       sb.append(menuComponent.print());
     }
     return sb.toString();
+  }
+
+  @Override
+  Iterator<MenuComponent> createIterator() {
+    if (iterator == null){ iterator = new CompositeIterator(menuComponents.iterator()); }
+    return iterator;
   }
 }

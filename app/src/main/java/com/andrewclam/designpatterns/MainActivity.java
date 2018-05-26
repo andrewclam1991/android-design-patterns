@@ -4,7 +4,7 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-import com.andrewclam.composite.client.MenuActivity;
+import com.andrewclam.composite.client.CompositeActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -16,7 +16,7 @@ public class MainActivity extends AppCompatActivity {
   }
 
   private void launchCompositeExample(){
-    Intent intent = new Intent(this, MenuActivity.class);
+    Intent intent = new Intent(this, CompositeActivity.class);
     startActivity(intent);
   }
 }
