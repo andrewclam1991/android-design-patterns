@@ -4,7 +4,7 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-import com.andrewclam.composite.client.CompositeActivity;
+import com.andrewclam.designpatterns.compositeclient.CompositeActivity;
 
 public class MainActivity extends AppCompatActivity {
 

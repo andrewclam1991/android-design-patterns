@@ -1,4 +1,4 @@
-package com.andrewclam.composite.client;
+package com.andrewclam.designpatterns.compositeclient;
 
 import com.andrewclam.composite.MenuComponent;
 

@@ -1,4 +1,4 @@
-package com.andrewclam.composite.client;
+package com.andrewclam.designpatterns.compositeclient;
 
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
@@ -30,13 +30,18 @@ public class CompositeActivity extends AppCompatActivity {
     fab.setOnClickListener(new View.OnClickListener() {
       @Override
       public void onClick(View view) {
-        Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-            .setAction("Action", null).show();
+        Snackbar.make(view, "Click action to show menu", Snackbar.LENGTH_INDEFINITE)
+            .setAction("Show menu", new View.OnClickListener() {
+              @Override
+              public void onClick(View v) {
+                Toast.makeText(getApplicationContext(),test(),Toast.LENGTH_LONG).show();
+              }
+            }).show();
       }
     });
-
-    Toast.makeText(this,test(),Toast.LENGTH_LONG).show();
   }
+
+  // TODO Implement add item to menu in memory
 
   private String test(){
     // Individual Composite Menu
