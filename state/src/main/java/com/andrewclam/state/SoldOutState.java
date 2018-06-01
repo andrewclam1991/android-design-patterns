@@ -7,7 +7,7 @@ class SoldOutState implements State {
 
   @Override
   public void insertQuarter() {
-
+    mGumballMachine.setResponse("No more inventory");
   }
 
   @Override
