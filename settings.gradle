@@ -1,1 +1,1 @@
-include ':app', ':composite'
+include ':app', ':composite', ':state'
